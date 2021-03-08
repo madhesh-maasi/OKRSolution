@@ -1,0 +1,64 @@
+.FormControlAdd {
+  width: 100%;
+  .MuiInput-underline {
+    &::before {
+      display: none;
+    }
+  }
+  .MuiInputBase-formControl {
+    padding-left: 0px;
+    .MuiSvgIcon-root {
+      color: $color-blue;
+    }
+    &.Mui-focused,
+    &:hover {
+      background-color: $light-blue;
+    }
+    &:focus &::-webkit-input-placeholder,
+    &:focus &::-ms-input-placeholder,
+    &:focus &::placeholder {
+      opacity: 0;
+    }
+    ::-webkit-input-placeholder {
+      color: $color-blue;
+      font-weight: 600;
+      opacity: 1;
+    }
+    :-ms-input-placeholder {
+      color: $color-blue;
+      font-weight: 600;
+      opacity: 1;
+    }
+    ::placeholder {
+      color: $color-blue;
+      font-weight: 600;
+      opacity: 1;
+    }
+  }
+  .MuiInputBase-input {
+    padding: 20px 0;
+  }
+}
+.accordion-slider {
+  .MuiSlider-root {
+    color: $color-primary;
+  }
+  .MuiSlider-rail {
+    height: 10px;
+    border-radius: 10px;
+  }
+  .MuiSlider-track {
+    height: 10px;
+    border-radius: 10px;
+    color: rgba($color-primary, 1);
+  }
+  .MuiSlider-thumb {
+    color: $color-primary;
+    width: 25px;
+    height: 25px;
+    margin-top: -9px;
+  }
+}
+.button-groups {
+  margin: 15px 0;
+}

@@ -1,0 +1,17 @@
+@mixin  boxShadowHover {
+    -webkit-box-shadow: 0 0.4px 1.6px rgba(0,0,0,.05), 
+    0 1px 4.2px rgba(0,0,0,.034), 
+    0 2.1px 8.5px rgba(0,0,0,.028), 
+    0 4.4px 17.5px rgba(0,0,0,.022), 
+    0 12px 48px rgba(0,0,0,.016) !important;
+    -moz-box-shadow: 0 0.4px 1.6px rgba(0,0,0,.05), 
+    0 1px 4.2px rgba(0,0,0,.034), 
+    0 2.1px 8.5px rgba(0,0,0,.028), 
+    0 4.4px 17.5px rgba(0,0,0,.022), 
+    0 12px 48px rgba(0,0,0,.016) !important;
+    box-shadow: 0 0.4px 1.6px rgba(0,0,0,.05), 
+    0 1px 4.2px rgba(0,0,0,.034), 
+    0 2.1px 8.5px rgba(0,0,0,.028), 
+    0 4.4px 17.5px rgba(0,0,0,.022), 
+    0 12px 48px rgba(0,0,0,.016) !important;
+}

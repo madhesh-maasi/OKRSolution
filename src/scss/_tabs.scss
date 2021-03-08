@@ -1,0 +1,15 @@
+.tabs {
+    
+    .ms-Pivot {
+        display: flex;
+        justify-content: center;
+    }
+    .ms-FocusZone {
+        margin-bottom: 15px;
+    }
+    .ms-Pivot-link {
+        font-family: $primaryFont;
+        $font-size-primary: 1rem;
+        color: $color-light-20;
+    }
+}

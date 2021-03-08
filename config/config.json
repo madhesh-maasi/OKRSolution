@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "okrwebpart-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/okrwebpart/OkrwebpartWebPart.js",
+          "manifest": "./src/webparts/okrwebpart/OkrwebpartWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "OkrwebpartWebPartStrings": "lib/webparts/okrwebpart/loc/{locale}.js"
+  }
+}

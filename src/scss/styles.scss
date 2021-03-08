@@ -1,0 +1,587 @@
+@import "variables";
+@import "mixin";
+@import "forms";
+@import "tabs";
+
+#workbenchPageContent {
+  max-width: 100%;
+}
+
+.ControlZone--emphasisBackground,
+.CanvasZoneContainer {
+  background-color: transparent !important;
+}
+
+.content_3f3fd3c2,
+.CanvasZone {
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+.ToolbarButtonTooltip {
+  display: none;
+}
+
+.Canvas {
+  margin: 0 !important;
+}
+
+body {
+  color: $color-secondary;
+  font-family: $primaryFont;
+  font-size: $font-size-primary;
+}
+
+.d-none {
+  display: none;
+}
+
+.MuiTypography-root {
+  color: $color-primary;
+}
+
+.pageTitle {
+  border-bottom: 0px solid $color-grey-light;
+  padding-bottom: 15px;
+  color: $color-primary;
+  display: flex;
+  justify-content: space-between;
+}
+
+.MuiPaper-elevation0 {
+  box-shadow: none !important;
+}
+
+.MuiIconButton-root {
+  &.button-sm {
+    padding: 5px;
+  }
+}
+
+.accordion {
+  margin-bottom: 10px !important ;
+  border-bottom: 1px solid $color-grey-light;
+
+  &.completed {
+    background-color: rgba($color-success, 0.1);
+  }
+
+  &.error {
+    background-color: rgba($color-danger, 0.1);
+  }
+
+  &:hover {
+    @include boxShadowHover();
+  }
+
+  .MuiAccordionSummary-root {
+    background-color: rgba($color-black, 0.05);
+    border-top: 1px solid rgba($color-black, 0.07);
+    border-left: 1px solid rgba($color-black, 0.07);
+    border-right: 1px solid rgba($color-black, 0.07);
+    &:hover {
+      background-color: rgba($color-black, 0.05);
+    }
+  }
+
+  &.MuiAccordion-root {
+    &::before {
+      display: none !important;
+    }
+
+    &.Mui-expanded {
+      @include boxShadowHover();
+
+      .MuiButtonBase-root {
+        background-color: rgba($color-black, 0.05);
+
+        &.accordion {
+          .MuiCollapse-container {
+            background-color: $color-white;
+          }
+        }
+      }
+    }
+  }
+
+  .MuiAccordionSummary-content {
+    align-items: center;
+    padding-left: 35px;
+    padding-right: 15px;
+
+    &::before {
+      width: 30px;
+      height: 30px;
+      // border: 2px solid $color-primary;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      content: "";
+      position: absolute;
+      left: 15px;
+      background-image: url("../images/icon-objective.jpg");
+      background-size: 100%;
+    }
+
+    p {
+      &.MuiTypography-root {
+        width: 35%;
+      }
+    }
+  }
+
+  .accordionFormControl {
+    margin-left: 0;
+
+    &.MuiFormControlLabel-root {
+      margin-left: 0;
+    }
+
+    .accordion-progressbar {
+      width: 210px;
+
+      .MuiLinearProgress-root {
+        width: 100%;
+        height: 15px;
+        border-radius: 10px;
+        background-color: rgba($color-primary, -0.5) !important;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 15px;
+          left: calc(50% - 7px);
+          width: 5.5px;
+          height: 5.5px;
+          top: 5px;
+          transform: rotate(45deg);
+          background-color: $color-grey-light-05;
+        }
+
+        .MuiLinearProgress-bar {
+          border-radius: 10px;
+          background-color: $color-primary;
+
+          &-ColorPrimary {
+            color: $color-primary;
+          }
+        }
+
+        background-color: rgba($color-primary, 0.3) !important;
+
+        &.secondaryProgress {
+          .MuiLinearProgress-bar {
+            background-color: $color-danger;
+          }
+        }
+      }
+    }
+  }
+
+  .MuiAccordionDetails-root {
+    flex-direction: column;
+    padding-bottom: 0;
+
+    &.accordion-details {
+      padding-left: 0;
+      padding-right: 0;
+      .makeStyles-root {
+        max-width: inherit !important;
+      }
+      .addKeyButton {
+      }
+
+      li {
+        border-bottom: 1px solid $color-grey-light;
+        padding: 7px 0;
+      }
+
+      .MuiList-padding {
+        width: 100%;
+        padding-bottom: 0;
+      }
+
+      .MuiListItemText-root {
+        max-width: calc(36% - 60px);
+        padding-left: 75px;
+      }
+    }
+  }
+}
+
+.icon-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid $color-light-25;
+  font-size: $font-size-primary;
+  text-align: center;
+  line-height: 30px;
+}
+
+.custom-avator {
+  min-width: 30px !important;
+  margin-right: 15px;
+  margin-left: 25px;
+}
+
+.accordion-slider {
+  width: 210px;
+}
+
+.button-right {
+  position: absolute;
+  right: 20px;
+}
+
+.modalPopupObjective {
+  .MuiDialogTitle-root {
+    background-color: $color-grey-light-10;
+    margin-bottom: 15px;
+  }
+
+  .MuiDialogContentText-root {
+    font-size: 14px;
+  }
+
+  .MuiFormControl-fullWidth {
+    margin-bottom: 15px;
+
+    .MuiInputLabel-formControl {
+      font-size: 14px;
+    }
+  }
+
+  .MuiDialogActions-spacing {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.close-button {
+  position: absolute !important;
+  right: 10px;
+  top: 10px;
+}
+
+.MuiStepper-horizontal {
+  background-color: transparent !important;
+}
+
+.nomargin {
+  margin: 0;
+}
+
+.MuiTableCell-sizeSmall {
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+}
+
+.Tabs-Container {
+  border-bottom: 1px solid $color-grey-light;
+
+  .MuiTab-textColorInherit {
+    opacity: 1;
+  }
+
+  .MuiTab-wrapper {
+    letter-spacing: 2.4px;
+    font-size: $font-size-primary;
+    color: $color-black;
+  }
+}
+
+.PrivateTabIndicator-colorPrimary-2 {
+  background-color: $color-primary !important;
+}
+
+th {
+  &.MuiTableCell-stickyHeader {
+    background-color: transparent !important;
+
+    &.MuiTableCell-head {
+      letter-spacing: 0.15px;
+      font-size: 15px;
+      font-weight: 400;
+      color: $color-light-30;
+      opacity: 1;
+    }
+  }
+}
+
+.MuiButton-containedPrimary {
+  background-color: $color-primary !important;
+  color: $color-white !important;
+
+  &:hover {
+    background-color: $color-primary-hover !important;
+  }
+}
+
+.MuiIconButton-colorPrimary {
+  color: $color-primary !important;
+}
+
+.MuiInput-underline {
+  &:after {
+    border-color: $color-primary !important;
+  }
+}
+
+.PrivateTabIndicator-colorSecondary-3 {
+  background-color: $color-secondary !important;
+}
+
+.makeStyles-root-5 {
+  max-width: inherit !important;
+}
+.create-key-containers {
+}
+.create-keyValues {
+  padding-left: 75px;
+  padding-right: 75px;
+  margin-bottom: 10px !important;
+  margin-top: 10px;
+}
+.totalcounttextbox {
+  width: 70px !important;
+}
+.date-finished {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0px;
+
+  .fdate {
+    background-color: $color-success;
+    color: $color-white;
+    padding: 3px 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .secondary02 {
+    background-color: $color-secondary02;
+    color: $color-white;
+    padding: 3px 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .inprogress {
+    background-color: $color-light-20;
+    color: $color-white;
+    padding: 3px 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .pendingdate {
+    background-color: $color-danger;
+    color: $color-white;
+    padding: 3px 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .pendingdate-yellow {
+    background-color: $color-yellow;
+    color: $color-black;
+    padding: 3px 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.hide {
+  display: none;
+}
+.mr-5 {
+  margin-right: 10px !important;
+}
+.addKeyButton {
+  margin-left: 75px !important;
+  margin-bottom: 20px !important ;
+  background-color: $color-danger !important;
+}
+.title-progress {
+  display: flex !important;
+  align-items: center !important;
+  .progressbar {
+    width: 210px !important;
+    height: 15px !important;
+    border-radius: 10px !important;
+    background-color: #eceff1 !important;
+    margin-left: 10px !important;
+    margin-right: 5px;
+    .MuiLinearProgress-root {
+      height: 15px !important;
+      border-radius: 10px !important;
+      background-color: rgba($color-primary, 0.3) !important;
+    }
+    .MuiLinearProgress-bar {
+      background-color: $color-primary !important;
+      border-radius: 10px !important;
+      height: 15px !important;
+    }
+  }
+}
+.button-head-group {
+  .MuiButton-contained {
+    margin-left: 15px;
+  }
+}
+.button-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  .MuiButton-contained {
+    margin-right: 10px;
+  }
+}
+
+table {
+  .MTableHeader-header {
+    .MuiTableCell-head {
+      background-color: rgba($color-primary, 0.5) !important;
+    }
+  }
+  .MuiTableCell-root {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .MuiIconButton-root {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    .MuiSvgIcon-root {
+      font-size: 17px;
+    }
+  }
+}
+
+.MuiButton {
+  &-containedSecondary {
+    background-color: $color-light-30 !important;
+    &.MuiButton-containedSecondary-02 {
+      background-color: $color-light-30;
+    }
+  }
+}
+.MuiBadge {
+  &-badge {
+    &-custom {
+      .MuiBadge-anchorOriginTopRightRectangle {
+        right: -15px !important;
+        top: 13px;
+        background-color: $color-secondary02;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+.MuiTableCell-head {
+  background-color: rgba($color-black, 0.03) !important;
+}
+.card-lines {
+  border: 1px solid rgba($color-light-30, 0.3);
+}
+.w30px {
+  width: 30px;
+}
+.mb-4 {
+  margin-bottom: 20px;
+}
+.text-center {
+  text-align: center;
+}
+.adminFunction {
+  margin-top: 0;
+}
+.text {
+  &-primary {
+    color: $color-primary;
+    font-weight: 500;
+  }
+}
+.mt-4 {
+  margin-top: 20px !important;
+}
+.ml-auto {
+  margin-left: auto !important;
+}
+.w-25 {
+  width: 25%;
+  margin-bottom: 15px !important;
+}
+.w-100 {
+  width: 100%;
+}
+.divider-text {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+  line-height: 25px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 5px;
+  z-index: 2;
+  background-color: #f5f5f5;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -33px;
+    right: -33px;
+    /* width: 100%; */
+    height: 1px;
+    background: rgba(0, 0, 0, 0.2);
+    top: 12px;
+    z-index: 0;
+  }
+}
+.departmentsummery {
+  .MuiPaper-root {
+    box-shadow: none !important;
+  }
+}
+.MuiStepIcon-root.MuiStepIcon-active {
+  color: $color-primary !important;
+}
+.MuiStepIcon-root.MuiStepIcon-completed {
+  color: $color-primary !important;
+}
+.mr-15 {
+  margin-right: 20px !important;
+}
+.button-transfer {
+  width: 100%;
+  margin-top: 40px !important;
+}
+.accordion-slider-flex {
+  display: flex;
+  align-items: center;
+  .accordion-slider {
+    margin-right: 16px;
+  }
+  h4 {
+    text-align: right;
+    width: 34px;
+  }
+}
+.alertify-notifier .ajs-message.ajs-error {
+  color: #fff !important;
+}
+.alertify-notifier .ajs-message.ajs-success {
+  color: #fff !important;
+  background: #85714d !important;
+}
+.chartjs-size-monitor{
+  width: 500px !important;
+  height: 500px !important;
+}
+#myChart,#myPieChart,#myBarChart{
+  width: 500px !important;
+  height: 500px !important;
+}
