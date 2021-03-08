@@ -9,6 +9,7 @@ import { Bar } from 'react-chartjs-2';
 import { MSGraphClient } from "@microsoft/sp-http";
 import * as MicrosoftGraph from "@microsoft/microsoft-graph-types";
 import { GraphError } from "@microsoft/microsoft-graph-client";
+import "../../../ExternalRef/CSS/style.css";  
 var users = [];
 var scaleXarray = [];
 var filterQuery: any = "";
@@ -94,12 +95,12 @@ export default class CompanyGraph extends React.Component<any, any> {
 
 
 
-  }
+  } 
 
 
   public render(): React.ReactElement {
     return (
-      <div>
+      <div className="graphsize">
         <Bar
           data={this.state.metadata}
           ref={(reference) => this.chartReference = reference}
@@ -112,6 +113,20 @@ export default class CompanyGraph extends React.Component<any, any> {
             legend: {
               display: false,
               position: 'right'
+            },scales: {         
+              xAxes: [ 
+                {
+                  ticks: {
+                    callback: function(label) {
+                      if (/\s/.test(label)) {
+                        return label.split(" ");
+                      }else{
+                        return label;
+                      }              
+                    }
+                  }
+                }
+              ]
             }
           }}
         />

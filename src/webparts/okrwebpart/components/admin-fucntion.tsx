@@ -23,6 +23,7 @@ import { IEmailProperties } from "@pnp/sp/sputilities";
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import "alertifyjs";
 import '../../../ExternalRef/CSS/alertify.min.css';
+import "../../../ExternalRef/CSS/style.css";  
 var alertify: any = require("../../../ExternalRef/JS/alertify.min.js");
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const top100Films = [];
@@ -262,7 +263,7 @@ this.loadAllDepartments();
                                             label="Select All"
                                         />
 
-                                        : <h3>No Objectives to display</h3>
+                                        : <h3 className="no-obj-label">No Objectives to display</h3>
                                 }
          
                                     <Table size="small" className="senderTable">

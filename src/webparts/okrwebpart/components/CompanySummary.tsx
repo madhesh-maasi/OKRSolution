@@ -93,6 +93,7 @@ import DoneIcon from '@material-ui/icons/Done';
 import * as FileSaver from "file-saver";
 import "alertifyjs";
 import '../../../ExternalRef/CSS/alertify.min.css';
+import '../../../ExternalRef/CSS/style.css';
 var alertify: any = require("../../../ExternalRef/JS/alertify.min.js");
 
 var moment: any = require("moment");

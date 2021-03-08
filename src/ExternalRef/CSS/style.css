@@ -256,21 +256,26 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
-.tbl-rgt
-{
+.tbl-rgt {
   margin-left: auto;
 }
 .MuiButton-root.Mui-disabled {
   color: #ffffff !important;
-  background-color: #a7a9aa !important
+  background-color: #a7a9aa !important;
 }
-.chartjs-size-monitor{
- 
+.graphsize {
+  width: 60vw;
+  margin: auto;
 }
-#myChart{
-  width: 500px !important;
-  height: 500px !important;
+.btnsCentering button {
+  box-shadow: 0 2px 7px -2px #b3b3b3;
+}
+.btnsCentering {
+  text-align: center;
+}
+.no-obj-label {
+  padding: 10px 50px;
 }
